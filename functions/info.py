@@ -36,11 +36,8 @@ class AnimeInfo:
 ‣ Quality : 480p, 720p, 1080p
 ‣ Season : {}
 ‣ Episode : {}
-━━━━━━━━━━━━━━━
-〣 Next Airing Episode: {}
-〣 Next Airing Episode Date: {}
 ━━━━━━━━━━━━━━━**
-〣 #{}
+‣ Main Channel: @Anime_Mayhem
 """
         self.proper_name = self.get_proper_name_for_func(name)
         self.name = name
