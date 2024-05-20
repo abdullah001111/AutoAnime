@@ -84,7 +84,7 @@ async def _start(event):
                 buttons=admin.admin_panel(),
             )
         await event.reply(
-            f"**Enjoy Ongoing Anime's Best Encode 24/7 🫡**",
+            f"**Hi:) I am an AutoAnime Bot made by My lazy @TeamMayhem**",
             buttons=[
                 [
                     Button.url("Main Channel", url="t.me/Anime_Mayhem"),
