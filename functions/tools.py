@@ -143,7 +143,7 @@ class Tools:
         return True, out
 
     async def compress(self, dl, out):
-        cmd = f'''{Var.FFMPEG} -i """{dl}""" -metadata "Encoded By"="@Anime_Mayhem" -preset ultrafast -c:v libx264 -crf {Var.CRF} -map 0:v -c:a aac -map 0:a -c:s copy -map 0:s? """{out}""" -y'''
+        cmd = f'''{Var.FFMPEG} -i """{dl}""" -metadata "Encoded By"="@Anime_Mayhem" -preset veryfast -c:v libx264 -crf {Var.CRF} -map 0:v -c:a aac -map 0:a -c:s copy -map 0:s? """{out}""" -y'''
         process = await asyncio.create_subprocess_shell(
             cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
