@@ -143,7 +143,7 @@ class Tools:
         return True, out
 
     async def compress(self, dl, out):
-        cmd = f'''{Var.FFMPEG} -i """{dl}""" -metadata "Encoded By"="https://github.com/kaif-00z/AutoAnimeBot/" -preset ultrafast -c:v libx265 -crf {Var.CRF} -map 0:v -c:a aac -map 0:a -c:s copy -map 0:s? """{out}""" -y'''
+        cmd = f'''{Var.FFMPEG} -i """{dl}""" -metadata:s:v:0 title="[Anime Mayhem] : (This Episode)" -metadata:s:a:0 title="[Telegram: @Anime_Mayhem]" -metadata:s:a:1 title="[Telegram: @Anime_Mayhem]" -map 0:v? -map 0:a? -map 0:s? -map 0:t? -metadata title="@Anime_Mayhem" -metadata author="@Anime_Mayhem" -metadata:s:s title="@Anime_Mayhem" -metadata:s:a title="@Anime_Mayhem" -metadata:s:v title="@Anime_Mayhem" -c:v libx264 -pix_fmt yuv420p10le -preset veryfast -crf 27 -c:a libopus -ac 2 -vbr 2 -ab 32k -c:s copy """{out}""" -y'''
         process = await asyncio.create_subprocess_shell(
             cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
